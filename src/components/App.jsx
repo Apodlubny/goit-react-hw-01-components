@@ -8,7 +8,7 @@ import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
 
-export const App = () => {
+const App = () => {
   return (
     <Wrapper>
       <Profile
@@ -24,3 +24,4 @@ export const App = () => {
     </Wrapper>
   );
 };
+export default App;
