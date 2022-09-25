@@ -9,11 +9,7 @@ export const FriendStatus = styled.span`
   height: 20px;
   border-radius: 50%;
   background-color: ${({ isOnline }) => {
-    if (isOnline) {
-      return 'green';
-    } else {
-      return 'red';
-    }
+    return isOnline === true ? 'green' : 'red';
   }};
   margin-right: 5px;
 `;
@@ -26,14 +22,3 @@ export const FriendAvatar = styled.img`
 export const FriendName = styled.p`
   font-size: 20px;
 `;
-
-// export const Status = styled.span`
-//   display: inline-block;
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 50%;
-//   margin-right: 20px;
-// `;
-// export const FriendName = styled.p`
-//   margin-left: 40px;
-// `;
