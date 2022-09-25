@@ -1,41 +1,26 @@
 import PropTypes from 'prop-types';
-import {
-  ContainerFriend,
-  FriendItem,
-  Status,
-  FriendName,
-} from './FriendList.styled';
-
-function FriendList({ friends }) {
+import FriendListItem from 'components/FriendListItem/FriendListItem';
+import { ContainerFriend, FriendItem } from './FriendList.styled';
+const FriendList = ({ friends }) => {
   return (
     <ContainerFriend>
-      {friends.map(friend => (
-        <FriendItem key={friend.id}>
-          <Status
-            style={{ backgroundColor: friend.isOnline ? 'green' : 'red' }}
-          ></Status>
-          <img
-            className="avatar"
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <FriendName>{friend.name}</FriendName>
-        </FriendItem>
-      ))}
+      {friends.map(friend => {
+        return (
+          <FriendItem key={friend.id}>
+            <FriendListItem
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+              id={friend.id}
+            />
+          </FriendItem>
+        );
+      })}
     </ContainerFriend>
   );
-}
+};
 
 export default FriendList;
-
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-      isOnline: PropTypes.bool,
-      id: PropTypes.number,
-    })
-  ),
+  friends: PropTypes.array.isRequired,
 };

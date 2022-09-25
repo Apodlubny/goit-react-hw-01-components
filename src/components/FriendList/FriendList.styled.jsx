@@ -12,6 +12,7 @@ export const ContainerFriend = styled.ul`
   border-radius: 10px;
   box-shadow: 1rem 1rem 2rem rgb(65, 64, 64), -1rem -1rem 2rem rgb(82, 81, 81);
 `;
+
 export const FriendItem = styled.li`
   display: flex;
   width: 250px;
@@ -27,13 +28,7 @@ export const FriendItem = styled.li`
       transform: scale(1.1);
 `;
 
-export const Status = styled.span`
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 20px;
-`;
-export const FriendName = styled.p`
-  margin-left: 40px;
-`;
+// import styled from '@emotion/styled';
+
+//
+//

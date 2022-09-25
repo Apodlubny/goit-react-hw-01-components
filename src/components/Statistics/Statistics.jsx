@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 function Statistics({ title, stats }) {
   return (
     <ContainerStatistics>
-      <Title>{title}</Title>
+      <Title>{title !== undefined && <Title>{title}</Title>}</Title>
 
       <StatList>
         {stats.map(stat => (
