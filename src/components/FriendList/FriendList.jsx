@@ -6,12 +6,11 @@ const FriendList = ({ friends }) => {
     <ContainerFriend>
       {friends.map(friend => {
         return (
-          <FriendItem key={friend.id}>
+          <FriendItem>
             <FriendListItem
               avatar={friend.avatar}
               name={friend.name}
               isOnline={friend.isOnline}
-              id={friend.id}
             />
           </FriendItem>
         );
@@ -23,4 +22,5 @@ const FriendList = ({ friends }) => {
 export default FriendList;
 FriendList.propTypes = {
   friends: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 };
