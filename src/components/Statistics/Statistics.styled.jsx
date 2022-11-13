@@ -34,6 +34,7 @@ export const Item = styled.li`
   border: 1px solid black;
   padding: 10px 20px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
